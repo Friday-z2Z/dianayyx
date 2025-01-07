@@ -69,7 +69,7 @@ export default {
             ctx.font = `${this.fontSize}px "宋体"`
             ctx.fillStyle = '#fff'
             ctx.fillText('源源', this.canvasWidth / 2, 0)// 水平居中，顶端对齐
-            ctx.fillText('新年快乐', this.canvasWidth / 2, this.fontSize + 15)// 写在下面，并且行距大一点
+            ctx.fillText('你最漂亮', this.canvasWidth / 2, this.fontSize + 15)// 写在下面，并且行距大一点
 
             // 获取画布位置
             const pix = ctx.getImageData(0, 0, this.canvasWidth, this.canvasHeight).data; const gap = 6
