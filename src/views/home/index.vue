@@ -8,7 +8,7 @@
                 :style="{ color: item.color, backgroundColor: item.backgroundColor }"
                 @click="favoriteClick(item)"
             >
-                <svg-icon icon-class="solar-bell" class="icon" />
+                <van-icon size="2em" :name="item.icon" />
                 <span class="name">{{ item.name }}</span>
             </div>
         </div>
@@ -24,13 +24,15 @@ export default {
                     name: '欢乐周末',
                     path: '/weekends',
                     color: 'rgba(19, 206, 102, 1)',
-                    backgroundColor: 'rgba(19, 206, 102, 0.3)'
+                    backgroundColor: 'rgba(19, 206, 102, 0.3)',
+                    icon: 'https://api.iconify.design/solar:confetti-minimalistic-bold-duotone.svg?color=%2313ce66'
                 },
                 {
                     name: '祝福',
                     path: '/bless',
                     color: 'rgba(105, 101, 234, 1)',
-                    backgroundColor: 'rgba(105, 101, 234, 0.3)'
+                    backgroundColor: 'rgba(105, 101, 234, 0.3)',
+                    icon: 'https://api.iconify.design/solar:heart-bold.svg?color=%236965ea'
                 }
             ]
         }
