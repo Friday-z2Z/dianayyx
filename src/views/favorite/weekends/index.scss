@@ -1,0 +1,10 @@
+.weekends {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .button ~ .button {
+        margin-left: 10px;
+    }
+}

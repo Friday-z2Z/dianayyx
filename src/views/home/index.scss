@@ -1,0 +1,24 @@
+.home {
+    height: 100%;
+    padding: 20px 0;
+    .container {
+        padding: 0 20px;
+        .item {
+            padding: 10px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            &~.item {
+                margin-top: 12px;
+            }
+            .icon {
+                font-size: 20px;
+            }
+            .name {
+                margin-left: 24px;
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
