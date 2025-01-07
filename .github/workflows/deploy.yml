@@ -14,11 +14,23 @@ jobs:
       # 官方action，将代码拉取到虚拟机
       - name: Checkout  ️ 
         uses: actions/checkout@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: true
+
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: pnpm
 
       - name: Install and Build   # 安装依赖、打包，如果提前已打包好无需这一步
         run: |
-          npm install
-          npm run build
+          pnpm install
+          pnpm run build
 
       - name: Deploy   # 部署
         uses: JamesIves/github-pages-deploy-action@v4.3.3
