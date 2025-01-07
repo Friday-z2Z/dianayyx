@@ -21,10 +21,6 @@ module.exports = {
                 plugins: [
                     postcss
                 ]
-            },
-            sass: {
-                prependData: `@import '@/styles/variables.scss';`, // 注意此处的 ; 不能少！ node-sass 配置全局变量
-                sassOptions: { outputStyle: 'expanded' }
             }
         }
     },
