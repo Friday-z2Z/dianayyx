@@ -15,6 +15,10 @@ export const constantRoutes = [
     {
         path: '/weekends',
         component: () => import('@/views/favorite/weekends')
+    },
+    {
+        path: '/bless',
+        component: () => import('@/views/favorite/bless')
     }
 ]
 
