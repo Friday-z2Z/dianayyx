@@ -15,7 +15,7 @@
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%) scale(1);
-        transition: all 0.15s;
+        transition: all 0.1s;
         z-index: 999;
         &:active {
             transform: translateX(-50%) scale(0.8);
