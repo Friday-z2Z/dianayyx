@@ -12,6 +12,7 @@
     "pixi.js": "^5.3.12",
     "postcss-plugin-px2rem": "^0.8.1",
     "postcss-px2rem": "^0.3.0",
+    "tinycolor2": "^1.6.0",
     "vant": "latest-v2",
     "vue": "^2.6.10",
     "vue-loader": "^15.11.1",

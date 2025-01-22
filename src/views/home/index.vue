@@ -25,7 +25,7 @@ export default {
                     path: '/weekends',
                     color: 'rgba(19, 206, 102, 1)',
                     backgroundColor: 'rgba(19, 206, 102, 0.3)',
-                    icon: 'https://api.iconify.design/solar:confetti-minimalistic-bold-duotone.svg?color=%2313ce66'
+                    icon: 'https://api.iconify.design/solar:camera-minimalistic-bold-duotone.svg?color=%2313ce66'
                 },
                 {
                     name: '祝福',
@@ -33,6 +33,13 @@ export default {
                     color: 'rgba(105, 101, 234, 1)',
                     backgroundColor: 'rgba(105, 101, 234, 0.3)',
                     icon: 'https://api.iconify.design/solar:heart-bold.svg?color=%236965ea'
+                },
+                {
+                    name: '烟花',
+                    path: '/firework',
+                    color: 'rgba(244, 190, 73, 1)',
+                    backgroundColor: 'rgba(244, 190, 73, 0.3)',
+                    icon: 'https://api.iconify.design/solar:confetti-minimalistic-bold-duotone.svg?color=%23f4be49'
                 }
             ]
         }

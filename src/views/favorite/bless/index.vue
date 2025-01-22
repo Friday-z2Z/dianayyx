@@ -46,6 +46,9 @@ export default {
             textPixels: []
         }
     },
+    beforeDestroy() {
+        this.clearStage()
+    },
     mounted() {
         this.startTextFireworks()
     },
@@ -58,6 +61,12 @@ export default {
             this.initCanvas()
             this.initTextFireworks()
             requestAnimationFrame(this.fireWorksAnimate)
+        },
+        /**
+         * 清除PIXI stage
+         */
+        clearStage() {
+            stage.removeChildren()
         },
         initCanvas() { // 初始化HTML5画布
             const canvas = this.$refs.textFireWorksCanvas
