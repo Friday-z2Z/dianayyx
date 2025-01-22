@@ -12,7 +12,7 @@
     }
     .emitter {
         position: absolute;
-        bottom: 10px;
+        bottom: 50px;
         left: 50%;
         transform: translateX(-50%) scale(1);
         transition: all 0.1s;
@@ -23,7 +23,7 @@
     }
     .tip {
         position: absolute;
-        bottom: 10px;
+        bottom: 50px;
         left: 50%;
         transform: translateX(calc(-50% + 2em)) translateY(-0.5em);
         z-index: 999;
@@ -41,7 +41,7 @@
     .bless {
         width: 100%;
         position: absolute;
-        bottom: 100px;
+        bottom: 150px;
         left: 0;
         color: #fff;
         text-align: center;

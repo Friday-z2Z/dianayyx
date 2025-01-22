@@ -2,7 +2,7 @@
     <div class="firework hidden">
         <van-icon
             class="emitter"
-            size="4em"
+            size="5em"
             name="https://api.iconify.design/twemoji:firecracker.svg?color=%23f4be49"
             @click="handleFire"
         />
