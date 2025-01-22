@@ -14,7 +14,7 @@
         />
         <canvas ref="firework" />
         <div class="bless">
-            <span class="author">{{ author }}</span>祝<span class="target">{{ target }}:</span>新年快乐!
+            <span class="who target">{{ who }}</span>祝<span class="to target">{{ to }}:</span>2025新年快乐!
             <div>{{ bless }}</div>
         </div>
     </div>
@@ -29,9 +29,10 @@ export default {
     data() {
         return {
             fireworkList: [],
-            author: '',
-            defaultAuthor: '章孝焐',
-            target: '大家',
+            who: '',
+            defaultWho: '章孝焐',
+            to: '',
+            defaultTo: '大家',
             blessList: [
                 '蛇年吉祥, 心想事成!',
                 '蛇舞新春, 福满乾坤!',
@@ -39,14 +40,21 @@ export default {
                 '旧岁辞, 灵蛇至, 新章启, 福满溢!',
                 '蛇年笑语盈门庭, 家和业兴岁月宁!',
                 '祥蛇献瑞, 君步新程!',
-                '蛇年翩至, 你事业腾飞!'
+                '蛇年翩至, 你事业腾飞!',
+                '蛇年吉祥，福禄双全!',
+                '福星高照，蛇岁平安!',
+                '灵蛇贺岁，岁岁平安!',
+                '金蛇迎春，笑口常开!',
+                '灵蛇灵动迎新岁，智慧与福共缠绵!',
+                '蛇年蜿蜒新征途，智慧如蛇步步赢!'
             ],
             bless: ''
         }
     },
     mounted() {
-        const { author = '' } = this.$route.query
-        this.author = author || this.defaultAuthor
+        const { who = '', to = '' } = this.$route.query
+        this.who = who || this.defaultWho
+        this.to = to || this.defaultTo
         this.initFirework()
     },
     methods: {

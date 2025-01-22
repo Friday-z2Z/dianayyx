@@ -12,7 +12,7 @@
     }
     .emitter {
         position: absolute;
-        bottom: 60px;
+        bottom: 10px;
         left: 50%;
         transform: translateX(-50%) scale(1);
         transition: all 0.15s;
@@ -23,7 +23,7 @@
     }
     .tip {
         position: absolute;
-        bottom: 60px;
+        bottom: 10px;
         left: 50%;
         transform: translateX(calc(-50% + 2em)) translateY(-0.5em);
         z-index: 999;
@@ -41,17 +41,18 @@
     .bless {
         width: 100%;
         position: absolute;
-        bottom: 5px;
+        bottom: 100px;
         left: 0;
         color: #fff;
         text-align: center;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-weight: bold;
-        .author {
-            color: #f4be49;
+        font-size: 20px;
+        .to {
+            margin-right: 10px;
         }
         .target {
-            margin-right: 10px;
+            color: #f4be49;
         }
     }
 }
