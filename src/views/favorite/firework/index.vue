@@ -30,7 +30,7 @@
                 <div>{{ bless }}</div>
             </div>
         </template>
-        <audio ref="music" src="../../../assets/music/bg-falling-you.mp3" autoplay loop />
+        <audio ref="music" :src="bgMusicPath" autoplay loop />
     </div>
 </template>
 <script>
