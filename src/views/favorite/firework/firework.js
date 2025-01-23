@@ -11,7 +11,7 @@ class ExplosiveDebris {
         this.firework = opt.firework
         this.x = opt.x
         this.y = opt.y
-        this.color = Math.random() > 0.2 ? opt.color : '#fff'
+        this.color = Math.random() >= 0.3 ? opt.color : Math.random() >= 0.5 ? tinycolor.random().toHexString() : '#fff'
         this.radius = opt.radius || 2
         this.angle = getRandom(0, 2 * Math.PI)
         this.speed = opt.speed || getRandom(0.1, 4)
@@ -76,7 +76,7 @@ class Explosive {
         // 爆炸碎片数量
         this.debrisNum = opt.debrisNum || getRandom(50, 400)
         // 是否要二次爆炸
-        this.secondBurst = opt.secondBurst || this.debrisNum <= 100
+        this.secondBurst = opt.secondBurst || this.debrisNum <= 200
         // 是否是第一次爆炸
         this.isFirstBurst = true
     }

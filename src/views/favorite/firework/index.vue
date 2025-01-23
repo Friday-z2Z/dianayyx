@@ -75,7 +75,7 @@ export default {
             // 动画循环
             const draw = () => {
                 // 使用半透明清空画布，形成拖尾效果
-                ctx.fillStyle = 'rgba(0,0,0,0.3)'
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.3)'
                 ctx.fillRect(0, 0, width, height)
 
                 ctx.save()
@@ -101,12 +101,30 @@ export default {
         // 烟花颜色列表
         createFireworkColor() {
             const colorList = [
-                '#ff0043',
-                '#14fc56',
-                '#1e7fff',
-                '#e60aff',
-                '#ffbf36',
-                '#ffffff'
+                '#ff7875',
+                '#f5222d',
+                '#ff9c6e',
+                '#fa541c',
+                '#ffc069',
+                '#fa8c16',
+                '#ffd666',
+                '#faad14',
+                '#fff566',
+                '#fadb14',
+                '#d3f261',
+                '#a0d911',
+                '#95de64',
+                '#52c41a',
+                '#5cdbd3',
+                '#13c2c2',
+                '#69b1ff',
+                '#1677ff',
+                '#85a5ff',
+                '#2f54eb',
+                '#b37feb',
+                '#722ed1',
+                '#ff85c0',
+                '#eb2f96'
             ]
             return colorList[Math.floor(Math.random() * colorList.length)]
         },
