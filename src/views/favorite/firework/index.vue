@@ -17,6 +17,7 @@
             <span class="who target">{{ who }}</span>祝<span class="to target">{{ to }}:</span>2025新年快乐!
             <div>{{ bless }}</div>
         </div>
+        <audio src="../../../assets/music/bg-new-year.mp3" autoplay loop />
     </div>
 </template>
 <script>
@@ -32,7 +33,7 @@ export default {
             who: '',
             defaultWho: '章孝焐',
             to: '',
-            defaultTo: '大家',
+            defaultTo: '源源',
             blessList: [
                 '蛇年吉祥, 心想事成!',
                 '蛇舞新春, 福满乾坤!',
@@ -56,6 +57,7 @@ export default {
         this.who = who || this.defaultWho
         this.to = to || this.defaultTo
         this.initFirework()
+        this.handleFire()
     },
     methods: {
         initFirework() {
