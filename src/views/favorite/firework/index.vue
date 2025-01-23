@@ -30,7 +30,7 @@
                 <div>{{ bless }}</div>
             </div>
         </template>
-        <audio ref="music" src="../../../assets/music/bg-new-year.mp3" autoplay loop />
+        <audio ref="music" :src="bgMusicPath" autoplay loop />
     </div>
 </template>
 <script>
@@ -48,6 +48,7 @@ export default {
             defaultWho: '章孝焐',
             to: '',
             defaultTo: '源源',
+            bgMusicPath: require('../../../assets/music/bg-falling-you.mp3'),
             blessList: [
                 '蛇年吉祥, 心想事成!',
                 '蛇舞新春, 福满乾坤!',
@@ -82,9 +83,12 @@ export default {
         }
     },
     mounted() {
-        const { who = '', to = '' } = this.$route.query
+        const { who = '', to = '', bg = '' } = this.$route.query
         this.who = who || this.defaultWho
         this.to = to || this.defaultTo
+        if (bg) {
+            this.bgMusicPath = require('../../../assets/music/bg-new-year.mp3')
+        }
     },
     methods: {
         handleShowGame() {
