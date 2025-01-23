@@ -1,23 +1,36 @@
 <template>
     <div class="firework hidden">
-        <van-icon
-            class="emitter"
-            size="5em"
-            name="https://api.iconify.design/twemoji:firecracker.svg?color=%23f4be49"
-            @click="handleFire"
-        />
-        <van-icon
-            v-if="fireworkList.length <= 0"
-            class="tip"
-            size="1.5em"
-            name="https://api.iconify.design/tabler:hand-finger-left.svg?color=%23f4be49"
-        />
-        <canvas ref="firework" />
-        <div class="bless">
-            <span class="who target">{{ who }}</span>祝<span class="to target">{{ to }}:</span>2025新年快乐!
-            <div>{{ bless }}</div>
+        <div v-if="!showGame" class="packet-container height-auto hidden">
+            <div class="packet-box">
+                <van-icon
+                    class="packet"
+                    size="5em"
+                    name="https://api.iconify.design/mingcute:red-packet-fill.svg?color=%23ff4e4c"
+                    @click="handleShowGame"
+                />
+                <div>接收<span class="target">{{ who }}</span>的祝福</div>
+            </div>
         </div>
-        <audio src="../../../assets/music/bg-new-year.mp3" autoplay loop />
+        <template v-else>
+            <van-icon
+                class="emitter"
+                size="5em"
+                name="https://api.iconify.design/twemoji:firecracker.svg?color=%23f4be49"
+                @click="handleFire"
+            />
+            <van-icon
+                v-if="fireworkList.length <= 0"
+                class="tip"
+                size="1.5em"
+                name="https://api.iconify.design/tabler:hand-finger-left.svg?color=%23f4be49"
+            />
+            <canvas ref="firework" />
+            <div class="bless">
+                <span class="who target">{{ who }}</span>祝<span class="to target">{{ to }}:</span>2025新年快乐!
+                <div>{{ bless }}</div>
+            </div>
+        </template>
+        <audio ref="music" src="../../../assets/music/bg-new-year.mp3" autoplay loop />
     </div>
 </template>
 <script>
@@ -29,6 +42,7 @@ export default {
     name: 'Firework',
     data() {
         return {
+            showGame: false,
             fireworkList: [],
             who: '',
             defaultWho: '章孝焐',
@@ -52,14 +66,31 @@ export default {
             bless: ''
         }
     },
+    beforeRouteEnter(to, from, next) {
+        next(vm => {
+            vm.showGame = from.path.indexOf('/home') > -1
+        })
+    },
+    watch: {
+        showGame(val) {
+            if (val) {
+                this.$nextTick(() => {
+                    this.initFirework()
+                    this.handleFire()
+                })
+            }
+        }
+    },
     mounted() {
         const { who = '', to = '' } = this.$route.query
         this.who = who || this.defaultWho
         this.to = to || this.defaultTo
-        this.initFirework()
-        this.handleFire()
     },
     methods: {
+        handleShowGame() {
+            this.$refs.music.play()
+            this.showGame = true
+        },
         initFirework() {
             const canvas = this.$refs.firework
             const width = window.innerWidth
