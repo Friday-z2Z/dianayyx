@@ -23,6 +23,10 @@ export const constantRoutes = [
     {
         path: '/firework',
         component: () => import('@/views/favorite/firework')
+    },
+    {
+        path: '/love-page',
+        component: () => import('@/views/favorite/love-page')
     }
 ]
 

@@ -40,6 +40,13 @@ export default {
                     color: 'rgba(244, 190, 73, 1)',
                     backgroundColor: 'rgba(244, 190, 73, 0.3)',
                     icon: 'https://api.iconify.design/solar:confetti-minimalistic-bold-duotone.svg?color=%23f4be49'
+                },
+                {
+                    name: '表白',
+                    path: '/love-page',
+                    color: 'rgba(0, 157, 255, 1)',
+                    backgroundColor: 'rgba(0, 157, 255, 0.3)',
+                    icon: 'https://api.iconify.design/solar:star-fall-minimalistic-line-duotone.svg?color=%23009dff'
                 }
             ]
         }
